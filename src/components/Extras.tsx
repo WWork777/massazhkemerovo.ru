@@ -5,7 +5,7 @@ import styles from "@styles/Extras.module.css";
 import { useState } from "react";
 
 // Функция для отображения заголовка с HTML
-const renderTitle = (title) => {
+const renderTitle = (title: string) => {
   if (
     title.includes("<br>") ||
     title.includes("<br/>") ||
@@ -83,7 +83,7 @@ export default function Extras() {
   const currentItems = items.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   // Функция для обработки смены страницы
-  const handlePageChange = (page) => {
+  const handlePageChange = (page: number) => {
     if (page === activePage) return;
     setActivePage(page);
     // Здесь можно добавить логику для анимации, если она реализована в CSS
