@@ -1,0 +1,260 @@
+.container {
+  width: 100%;
+  max-width: var(--container, 1200px);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  position: relative;
+}
+
+/* Фоновое свечение */
+.background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 40%;
+  background: rgb(255, 169, 177);
+  filter: blur(200px);
+  z-index: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.text_m1 {
+  font: 1em "Montserrat-Medium", sans-serif;
+  font-size: clamp(24px, 5vw, 36px);
+  color: #fff;
+  padding: 2vh 0;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Список карточек */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 5vh;
+  display: flex;
+  gap: 24px;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.list li {
+  flex: 0 0 calc(33.33% - 16px);
+  min-width: 280px;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .list li {
+    flex: 0 0 calc(50% - 12px);
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .list li {
+    flex: 0 0 100%;
+    min-width: auto;
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  min-height: 150px;
+  min-width: 338px;
+  max-width: 338px;
+  max-height: 150px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cardTitle {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.cardDescription {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 1em;
+  color: #ccc;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.steps {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 10px 0;
+}
+
+.step {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 1.2em;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.step:hover {
+  color: #fff;
+}
+
+.active {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+/* Анимации */
+.animateLeft {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animateRight {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+  .text_m1 {
+    font-size: clamp(20px, 4.5vw, 32px);
+    padding: 1.5vh 0;
+  }
+  .list {
+    gap: 20px;
+    padding: 4vh;
+  }
+  .list li {
+    flex: 0 0 calc(50% - 12px);
+    min-width: 380px !important;
+    max-width: 380px !important;
+  }
+  .card {
+    padding: 16px;
+    min-height: 90px;
+  }
+  .cardTitle {
+    font-size: 1em;
+  }
+  .cardDescription {
+    font-size: 0.85em;
+  }
+  .steps {
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .step {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .background {
+    width: 70%;
+    height: 50%;
+    filter: blur(150px);
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 3vh;
+  }
+  .list li {
+    flex: 0 0 100%;
+    min-width: unset;
+  }
+  .steps {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text_m1 {
+    font-size: clamp(18px, 6vw, 24px);
+  }
+  .list {
+    padding: 2vh;
+  }
+  .card {
+    padding: 12px;
+  }
+  .cardTitle {
+    font-size: 0.95em;
+  }
+  .cardDescription {
+    font-size: 0.8em;
+  }
+  .list li {
+    flex: 0 0 calc(50% - 12px);
+    min-width: 320px !important;
+    max-width: 320px !important;
+  }
+  .steps {
+    margin-top: 20px;
+  }
+  .step {
+    font-size: 1em;
+  }
+}

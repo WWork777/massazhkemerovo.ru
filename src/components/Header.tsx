@@ -1,0 +1,143 @@
+"use client";
+
+import styles from "@styles/Header.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  return (
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <div className={styles.row}>
+          <Link href="#home" className={styles.heder_logo}>
+            <Image src="/images/logo.svg" alt="Логотип" fill priority />
+          </Link>
+          <nav className={styles.nav}>
+            <a href="#masters">Мастера</a>
+            <a href="#programs">Программы</a>
+            <a href="#blog">Блог</a>
+            <a href="#about">О нас</a>
+            <a href="#jobs">Вакансии</a>
+            <a href="#contacts">Контакты</a>
+          </nav>
+          <div className={styles.contacts}>
+            <a className={styles.phone} href="tel:+7 (983) 210-34-33">
+              +7 (983) 210-34-33
+            </a>
+            <Link
+              href="https://t.me/aetherium1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.social}
+            >
+              <Image
+                src="/images/telegramm.svg"
+                alt="Telegram"
+                width={24}
+                height={24}
+              />
+            </Link>
+            <Link
+              href="https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.social}
+            >
+              <Image
+                src="/images/whatsapp.svg"
+                alt="WhatsApp"
+                width={24}
+                height={24}
+              />
+            </Link>
+          </div>
+          <button
+            className={`${styles.mobile_menu_btn} ${
+              isMenuOpen ? styles.open : ""
+            }`}
+            onClick={toggleMenu}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      {isMenuOpen && (
+        <div className={`${styles.mobile_menu} ${styles.open}`}>
+          <button
+            className={`${styles.mobile_menu_btn} ${styles.open}`}
+            onClick={closeMenu}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div className={styles.mobile_socials}>
+            <Link
+              href="https://t.me/aetherium1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.social}
+            >
+              <Image
+                src="/images/telegramm.svg"
+                alt="Telegram"
+                width={32}
+                height={32}
+              />
+            </Link>
+            <Link
+              href="https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.social}
+            >
+              <Image
+                src="/images/whatsapp.svg"
+                alt="WhatsApp"
+                width={32}
+                height={32}
+              />
+            </Link>
+          </div>
+
+          <nav className={styles.nav}>
+            <a href="#masters" onClick={closeMenu}>
+              Мастера
+            </a>
+            <a href="#programs" onClick={closeMenu}>
+              Программы
+            </a>
+            <a href="#blog" onClick={closeMenu}>
+              Блог
+            </a>
+            <a href="#about" onClick={closeMenu}>
+              О нас
+            </a>
+            <a href="#jobs" onClick={closeMenu}>
+              Вакансии
+            </a>
+            <a href="#contacts" onClick={closeMenu}>
+              Контакты
+            </a>
+          </nav>
+
+          {/* Телефон внизу */}
+          <div className={styles.contacts}>
+            <a className={styles.phone} href="tel:+7 (983) 210-34-33">
+              +7 (983) 210-34-33
+            </a>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
