@@ -44,8 +44,8 @@ export default function Footer() {
           </nav>
 
           <div className={styles.contact}>
-            <a href="tel:+79059169286" className={styles.phone}>
-              +7 905 916-92-86
+            <a href="tel:+7 (983) 210-34-33" className={styles.phone}>
+              +7 (983) 210-34-33
             </a>
             <div className={styles.socialIcons}>
               <Link
