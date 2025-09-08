@@ -62,7 +62,7 @@ export default function FAQ() {
     <section className={styles.section}>
       <div className="container">
         <div className={styles.container_panel}>
-          <h2 className={styles.text_m1}>Наши Мастера</h2>
+          <h2 className={styles.text_m1}>Вопросы и ответы</h2>
         </div>
         <div className={styles.list}>
           {items.map((it, i) => (

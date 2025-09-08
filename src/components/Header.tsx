@@ -19,12 +19,24 @@ export default function Header() {
             <Image src="/images/logo.svg" alt="Логотип" fill priority />
           </Link>
           <nav className={styles.nav}>
-            <a href="#masters">Мастера</a>
-            <a href="#programs">Программы</a>
-            <a href="#blog">Блог</a>
-            <a href="#about">О нас</a>
-            <a href="#jobs">Вакансии</a>
-            <a href="#contacts">Контакты</a>
+            <Link href="/#masters" onClick={closeMenu}>
+              Мастера
+            </Link>
+            <Link href="/#programs" onClick={closeMenu}>
+              Программы
+            </Link>
+            <Link href="/#blog" onClick={closeMenu}>
+              Блог
+            </Link>
+            <Link href="/#about" onClick={closeMenu}>
+              О нас
+            </Link>
+            <Link href="/#vacancy" onClick={closeMenu}>
+              Вакансии
+            </Link>
+            <Link href="/#contacts" onClick={closeMenu}>
+              Контакты
+            </Link>
           </nav>
           <div className={styles.contacts}>
             <a className={styles.phone} href="tel:+7 (983) 210-34-33">
@@ -110,24 +122,24 @@ export default function Header() {
           </div>
 
           <nav className={styles.nav}>
-            <a href="#masters" onClick={closeMenu}>
+            <Link href="/#masters" onClick={closeMenu}>
               Мастера
-            </a>
-            <a href="#programs" onClick={closeMenu}>
+            </Link>
+            <Link href="/#programs" onClick={closeMenu}>
               Программы
-            </a>
-            <a href="#blog" onClick={closeMenu}>
+            </Link>
+            <Link href="/#blog" onClick={closeMenu}>
               Блог
-            </a>
-            <a href="#about" onClick={closeMenu}>
+            </Link>
+            <Link href="/#about" onClick={closeMenu}>
               О нас
-            </a>
-            <a href="#jobs" onClick={closeMenu}>
+            </Link>
+            <Link href="/#vacancy" onClick={closeMenu}>
               Вакансии
-            </a>
-            <a href="#contacts" onClick={closeMenu}>
+            </Link>
+            <Link href="/#contacts" onClick={closeMenu}>
               Контакты
-            </a>
+            </Link>
           </nav>
 
           <div className={styles.contacts}>

@@ -22,22 +22,22 @@ export default function Footer() {
           <nav className={styles.nav}>
             <ul className={styles.navList}>
               <li>
-                <Link href="/masters">Мастера</Link>
+                <Link href="/#masters">Мастера</Link>
               </li>
               <li>
-                <Link href="/programs">Программы</Link>
+                <Link href="/#programs">Программы</Link>
               </li>
               <li>
-                <Link href="/blog">Блог</Link>
+                <Link href="/#blog">Блог</Link>
               </li>
               <li>
-                <Link href="/about">О нас</Link>
+                <Link href="/#about">О нас</Link>
               </li>
               <li>
-                <Link href="/vacancies">Вакансии</Link>
+                <Link href="/#vacancy">Вакансии</Link>
               </li>
               <li>
-                <Link href="/contacts">Контакты</Link>
+                <Link href="/#contacts">Контакты</Link>
               </li>
             </ul>
           </nav>
