@@ -130,7 +130,6 @@ export default function Header() {
             </a>
           </nav>
 
-          {/* Телефон внизу */}
           <div className={styles.contacts}>
             <a className={styles.phone} href="tel:+7 (983) 210-34-33">
               +7 (983) 210-34-33

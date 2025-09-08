@@ -112,7 +112,6 @@
   padding-top: 16px;
 }
 
-/* Адаптивность */
 @media (max-width: 1024px) {
   .section {
     padding: 60px 0;

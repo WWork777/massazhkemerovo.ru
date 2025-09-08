@@ -10,7 +10,6 @@
   position: relative;
 }
 
-/* Фоновое свечение */
 .background {
   position: absolute;
   top: 50%;
@@ -33,7 +32,6 @@
   z-index: 1;
 }
 
-/* Список карточек */
 .list {
   list-style: none;
   margin: 0;
@@ -131,7 +129,6 @@
   font-weight: bold;
 }
 
-/* Анимации */
 .animateLeft {
   animation: slideInLeft 0.8s ease-out forwards;
 }
@@ -170,7 +167,6 @@
   }
 }
 
-/* Адаптивность */
 @media (max-width: 1024px) {
   .container {
     padding: 0 15px;

@@ -9,6 +9,7 @@ import Certificates from "@components/Certificates";
 import FAQ from "@components/FAQ";
 import Contacts from "@components/Contacts";
 import Footers from "@components/Footers";
+import Vacansy from "@/components/Vacansy";
 
 export const metadata = {
   title: "Салон эротического массажа в Кемерово",
@@ -38,6 +39,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Vacansy />
         <Masters />
         <Programs />
         <Extras />

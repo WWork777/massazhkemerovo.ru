@@ -7,7 +7,6 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* Верхняя строка: логотип + навигация + контакт */}
         <div className={styles.topRow}>
           <div className={styles.logo}>
             <Link href="#home">
@@ -76,7 +75,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Теги: теперь в виде одного блока */}
         <div className={styles.tagsContainer}>
           <div className={styles.tags}>
             <span className={styles.tag}>
@@ -109,7 +107,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Нижняя строка: копирайт и политика */}
         <div className={styles.bottom}>
           <p className={styles.copyright}>
             © 2025 - Салон не оказывает услуг интимного характера!

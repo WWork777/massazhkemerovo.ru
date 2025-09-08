@@ -1,5 +1,3 @@
-/* src/styles/Footers.module.css */
-
 .footer {
   background-color: #1a1a1a;
   color: white;
@@ -16,7 +14,6 @@
   padding: 0 20px;
 }
 
-/* Верхняя строка: логотип + навигация + контакт */
 .topRow {
   display: flex;
   justify-content: space-between;
@@ -86,7 +83,6 @@
   transform: scale(1.1);
 }
 
-/* Теги: теперь в одном блоке */
 .tagsContainer {
   display: flex;
   justify-content: center;
@@ -113,7 +109,6 @@
   cursor: default;
 }
 
-/* Нижняя строка */
 .bottom {
   display: flex;
   justify-content: space-between;
@@ -137,7 +132,6 @@
   color: #ffa9b1;
 }
 
-/* Адаптивность */
 @media (max-width: 1024px) {
   .footer {
     padding: 20px 0;

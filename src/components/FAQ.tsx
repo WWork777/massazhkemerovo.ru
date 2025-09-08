@@ -1,4 +1,3 @@
-// src/components/FAQ.tsx
 "use client";
 import { useState } from "react";
 import styles from "@styles/FAQ.module.css";

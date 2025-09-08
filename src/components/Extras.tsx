@@ -1,10 +1,8 @@
 "use client";
 
-// src/components/Extras.tsx
 import styles from "@styles/Extras.module.css";
 import { useState } from "react";
 
-// Функция для отображения заголовка с HTML
 const renderTitle = (title: string) => {
   if (
     title.includes("<br>") ||
@@ -23,7 +21,7 @@ const items = [
       "(возможность добавить еще одну девушку в сеанс) - стоимость программы",
   },
   {
-    title: "Эффект распущенных волос", // Исправлена опечатка
+    title: "Эффект распущенных волос",
     description:
       "(мастер меняет прическу для большей естественности и игривости) - 2000 руб",
   },
@@ -32,7 +30,7 @@ const items = [
     description: "(использование специализированных аксессуаров) - 3000 руб",
   },
   {
-    title: "Продление удовольствия <br/> (+30 минут)", // Исправлен HTML тег
+    title: "Продление удовольствия <br/> (+30 минут)",
     description: "(увеличение продолжительности сеанса) - 3000 руб",
   },
   {
@@ -65,7 +63,7 @@ const items = [
   },
   {
     title: "Цветок лотоса",
-    description: "Поцелуй в зоне бикини - 3000 руб", // Исправлена опечатка
+    description: "Поцелуй в зоне бикини - 3000 руб",
   },
   {
     title: "Финальный релакс",
@@ -82,11 +80,9 @@ export default function Extras() {
   const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
   const currentItems = items.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
-  // Функция для обработки смены страницы
   const handlePageChange = (page: number) => {
     if (page === activePage) return;
     setActivePage(page);
-    // Здесь можно добавить логику для анимации, если она реализована в CSS
   };
 
   return (
@@ -98,7 +94,6 @@ export default function Extras() {
         <ul className={styles.list}>
           {currentItems.map((item, index) => (
             <li key={startIndex + index} className={styles.card}>
-              {/* Используем функцию renderTitle для корректного отображения HTML */}
               <h3 className={styles.cardTitle}>{renderTitle(item.title)}</h3>
               <p className={styles.cardDescription}>{item.description}</p>
             </li>
