@@ -13,7 +13,7 @@ const masters = [
   { name: 'Ева', img: '/images/masters/Ева.png', age: 22, height: 177, weight: 64, bust: 3 },
   { name: 'Адель', img: '/images/masters/Адель.png', age: 21, height: 180, weight: 56 },
   { name: 'Яна', img: '/images/masters/Яна.png', age: 24, height: 173, weight: 55, bust: 3 },
-  { name: 'Кирилл', img: '/images/masters/Кирилл.jpg', age: 32, height: 175, weight: 85, record: true },
+  { name: 'Кирилл', img: '/images/masters/Кирилл.jpg', age: 32, height: 175, weight: 85 /*record: true*/ },
 ]
 
 type SlickSettings = {
@@ -91,11 +91,11 @@ export default function Masters() {
 
                     <div className={styles.info_panel}>
                       <div>
-                        {m.record && (
+                        {/* {m.record && (
                           <div className={styles.recordWrapper}>
                             <span className={styles.recordText}>Мастер по предварительной записи</span>
                           </div>
-                        )}
+                        )} */}
                         <h3>{m.name}</h3>
                         <div className={styles.info}>
                           {m.age && <span>Возраст: {m.age}</span>}

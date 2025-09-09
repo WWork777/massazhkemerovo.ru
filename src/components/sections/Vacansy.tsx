@@ -2,7 +2,7 @@ import styles from "@/styles/Vacansy.module.scss";
 
 export default function VacansyAlt() {
   return (
-    <section className={styles.vacancyAlt} id="vacancy">
+    <section className={styles.vacancyAlt} id="vacansy">
       <div className={styles.altHeader}>
         <h2 className={styles.text_m2}>Открой «Эдем» вместе с нами</h2>
         <p className={styles.subtitle}>

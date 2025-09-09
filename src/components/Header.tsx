@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import styles from "@styles/Header.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import styles from '@styles/Header.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,55 +15,52 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.row}>
-          <Link href="#home" className={styles.heder_logo}>
-            <Image src="/images/logo.svg" alt="Логотип" fill priority />
+          <Link href='/' className={styles.heder_logo}>
+            <Image src='/images/logo.svg' alt='Логотип' fill priority />
           </Link>
           <nav className={styles.nav}>
-            <Link href="/#masters" onClick={closeMenu}>
+            <Link href='/masters' onClick={closeMenu}>
               Мастера
             </Link>
-            <Link href="/#programs" onClick={closeMenu}>
+            <Link href='/programs' onClick={closeMenu}>
               Программы
             </Link>
-            <Link href="/#blog" onClick={closeMenu}>
-              Блог
-            </Link>
-            <Link href="/#about" onClick={closeMenu}>
+            <Link href='/about' onClick={closeMenu}>
               О нас
             </Link>
-            <Link href="/#vacancy" onClick={closeMenu}>
+            <Link href='/vacansy' onClick={closeMenu}>
               Вакансии
             </Link>
-            <Link href="/#contacts" onClick={closeMenu}>
+            <Link href='/contacts' onClick={closeMenu}>
               Контакты
             </Link>
           </nav>
           <div className={styles.contacts}>
-            <a className={styles.phone} href="tel:+7 (983) 210-34-33">
+            <a className={styles.phone} href='tel:+7 (983) 210-34-33'>
               +7 (983) 210-34-33
             </a>
             <Link
-              href="https://t.me/aetherium1"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://t.me/aetherium1'
+              target='_blank'
+              rel='noopener noreferrer'
               className={styles.social}
             >
               <Image
-                src="/images/telegramm.svg"
-                alt="Telegram"
+                src='/images/telegramm.svg'
+                alt='Telegram'
                 width={24}
                 height={24}
               />
             </Link>
             <Link
-              href="https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0'
+              target='_blank'
+              rel='noopener noreferrer'
               className={styles.social}
             >
               <Image
-                src="/images/whatsapp.svg"
-                alt="WhatsApp"
+                src='/images/whatsapp.svg'
+                alt='WhatsApp'
                 width={24}
                 height={24}
               />
@@ -71,7 +68,7 @@ export default function Header() {
           </div>
           <button
             className={`${styles.mobile_menu_btn} ${
-              isMenuOpen ? styles.open : ""
+              isMenuOpen ? styles.open : ''
             }`}
             onClick={toggleMenu}
           >
@@ -94,27 +91,27 @@ export default function Header() {
 
           <div className={styles.mobile_socials}>
             <Link
-              href="https://t.me/aetherium1"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://t.me/aetherium1'
+              target='_blank'
+              rel='noopener noreferrer'
               className={styles.social}
             >
               <Image
-                src="/images/telegramm.svg"
-                alt="Telegram"
+                src='/images/telegramm.svg'
+                alt='Telegram'
                 width={32}
                 height={32}
               />
             </Link>
             <Link
-              href="https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://api.whatsapp.com/send/?phone=79998887766&text&type=phone_number&app_absent=0'
+              target='_blank'
+              rel='noopener noreferrer'
               className={styles.social}
             >
               <Image
-                src="/images/whatsapp.svg"
-                alt="WhatsApp"
+                src='/images/whatsapp.svg'
+                alt='WhatsApp'
                 width={32}
                 height={32}
               />
@@ -122,28 +119,28 @@ export default function Header() {
           </div>
 
           <nav className={styles.nav}>
-            <Link href="/#masters" onClick={closeMenu}>
+            <Link href='/masters' onClick={closeMenu}>
               Мастера
             </Link>
-            <Link href="/#programs" onClick={closeMenu}>
+            <Link href='/programs' onClick={closeMenu}>
               Программы
             </Link>
-            <Link href="/#blog" onClick={closeMenu}>
+            <Link href='/#blog' onClick={closeMenu}>
               Блог
             </Link>
-            <Link href="/#about" onClick={closeMenu}>
+            <Link href='/about' onClick={closeMenu}>
               О нас
             </Link>
-            <Link href="/#vacancy" onClick={closeMenu}>
+            <Link href='/vacansy' onClick={closeMenu}>
               Вакансии
             </Link>
-            <Link href="/#contacts" onClick={closeMenu}>
+            <Link href='/contacts' onClick={closeMenu}>
               Контакты
             </Link>
           </nav>
 
           <div className={styles.contacts}>
-            <a className={styles.phone} href="tel:+7 (983) 210-34-33">
+            <a className={styles.phone} href='tel:+7 (983) 210-34-33'>
               +7 (983) 210-34-33
             </a>
           </div>

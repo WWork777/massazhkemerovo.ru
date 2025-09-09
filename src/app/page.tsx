@@ -1,22 +1,22 @@
-import Head from "next/head";
-import Header from "@components/Header";
-import Hero from "@components/Hero";
-import Masters from "@components/Masters";
-import Programs from "@components/Programs";
-import Extras from "@components/Extras";
-import About from "@components/About";
-import Certificates from "@components/Certificates";
-import FAQ from "@components/FAQ";
-import Contacts from "@components/Contacts";
-import Footers from "@components/Footers";
-import Vacansy from "@/components/Vacansy";
+import Head from 'next/head';
+import Header from '@components/Header';
+import Hero from '@/components/sections/Hero';
+import Masters from '@/components/sections/Masters';
+import Programs from '@/components/sections/Programs';
+import Extras from '@/components/sections/Extras';
+import About from '@/components/sections/About';
+import Certificates from '@/components/sections/Certificates';
+import FAQ from '@/components/sections/FAQ';
+import Contacts from '@/components/sections/Contacts';
+import Footers from '@/components/Footers';
+import Vacansy from '@/components/sections/Vacansy';
 
 export const metadata = {
-  title: "Салон эротического массажа в Кемерово",
+  title: 'Салон эротического массажа в Кемерово',
   description:
-    "VIP салон эротического массажа в Кемерово. Индивидуальные программы, приватная атмосфера, профессиональные массажистки. Доступные цены.  ",
+    'VIP салон эротического массажа в Кемерово. Индивидуальные программы, приватная атмосфера, профессиональные массажистки. Доступные цены.  ',
   keywords:
-    "эротический массаж Кемерово, салон массажа, релакс для мужчин, эротические услуги",
+    'эротический массаж Кемерово, салон массажа, релакс для мужчин, эротические услуги',
   alternates: {
     canonical: `https://massazhkemerovo.ru`,
   },
@@ -36,9 +36,12 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Header />
       <main>
-        <Hero />
+        <Hero
+          title='Открываем новый салон эротического массажа в Кемерово'
+          subTitle='Большая вечеринка 18+, шоу‑программа, DJ и welcome‑бар.'
+          subTitleSecond='Смело, красиво и по‑взрослому — без компромиссов.'
+        />
         <Vacansy />
         <Masters />
         <Programs />
@@ -47,7 +50,6 @@ export default function Home() {
         <Certificates />
         <FAQ />
         <Contacts />
-        <Footers />
       </main>
     </>
   );
